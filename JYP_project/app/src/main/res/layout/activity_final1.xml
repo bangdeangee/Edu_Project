@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jyp.jyp_project.FinalActivity1">
+
+    <RelativeLayout
+        android:id="@+id/cadreFinal1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textFinal1"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="39dp"
+            android:text="운동시간!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <TextView
+            android:id="@+id/textoption"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textFinal1"
+            android:text="다양한 기능"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <TabHost
+            android:id="@+id/tabHost1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoption">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="5" />
+
+                <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- 첫 번째 페이지. content1: 놀이 방법 -->
+                    <LinearLayout
+                        android:id="@+id/content1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="#00FF00"
+                            android:gravity="center"
+                            android:padding="8dp" />
+                        <!--android:text="TAB CONTENT 1" />-->
+
+                    </LinearLayout>
+
+                    <!-- 두 번째 페이지. content2: 효과 -->
+                    <LinearLayout
+                        android:id="@+id/content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="#00FFFF"
+                            android:gravity="center"
+                            android:padding="8dp" />
+                        <!--android:text="TAB CONTENT 2" />-->
+
+                    </LinearLayout>
+
+                    <!-- 세 번째 페이지. content3: 동영상 -->
+                    <LinearLayout
+                        android:id="@+id/content3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/videobutton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="영상보기" />
+
+                        <!--<View-->
+                            <!--android:id="@+id/tab3"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="150dp"-->
+                            <!--android:background="#0000FF"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="8dp"-->
+                            <!--android:text="###"/>-->
+                        <com.google.android.youtube.player.YouTubePlayerView
+                            android:id="@+id/youtube_view_tab3"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/startButton"
+                            android:layout_marginTop="14dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <!-- 네 번째 페이지. content4: 자료 -->
+                    <LinearLayout
+                        android:id="@+id/content4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/content_sub4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/readbutton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="내용출력" />
+
+                            <Button
+                                android:id="@+id/savebutton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="다운로드" />
+
+                        </LinearLayout>
+
+                        <TextView
+                        android:id="@+id/tab4"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="#FFFF00"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Samsung Galaxy S7\Phone 아래 파일 생성" />
+                    </LinearLayout>
+
+                    <!-- 다섯 번째 페이지. content5: 홈 -->
+                    <LinearLayout
+                        android:id="@+id/content5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/backbutton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="돌아가기" />
+
+                        <TextView
+                            android:id="@+id/tab5"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="#F0FFFF"
+                            android:gravity="center"
+                            android:padding="8dp" />
+                        <!--android:text="TAB CONTENT 5" />-->
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+        <!--<TabWidget-->
+        <!--android:id="@android:id/tabs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignTop="@+id/textFinal1" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/lowButton"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/textoption"-->
+        <!--android:text="놀이방법" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/Button2"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/textoption"-->
+        <!--android:layout_toEndOf="@+id/lowButton"-->
+        <!--android:layout_toRightOf="@+id/lowButton"-->
+        <!--android:text="효과" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/finalView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/Button3"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/textoption"-->
+        <!--android:layout_toEndOf="@+id/Button2"-->
+        <!--android:layout_toRightOf="@+id/Button2"-->
+        <!--android:text="동영상" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/Button4"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBaseline="@+id/Button3"-->
+        <!--android:layout_alignBottom="@+id/Button3"-->
+        <!--android:layout_toEndOf="@+id/Button3"-->
+        <!--android:layout_toRightOf="@+id/Button3"-->
+        <!--android:text="자료" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/Button5"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBaseline="@+id/Button4"-->
+        <!--android:layout_alignBottom="@+id/Button4"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:text="home" />-->
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

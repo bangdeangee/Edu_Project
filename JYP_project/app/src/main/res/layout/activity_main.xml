@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jyp.jyp_project.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/cadreMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/gymButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textMain"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="116dp"
+            android:text="체육관" />
+
+        <Button
+            android:id="@+id/classButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/gymButton"
+            android:layout_alignBottom="@+id/gymButton"
+            android:layout_toLeftOf="@+id/gymButton"
+            android:layout_toStartOf="@+id/gymButton"
+            android:text="교실" />
+
+        <Button
+            android:id="@+id/groundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/gymButton"
+            android:layout_alignBottom="@+id/gymButton"
+            android:layout_toEndOf="@+id/gymButton"
+            android:layout_toRightOf="@+id/gymButton"
+            android:text="운동장" />
+
+        <TextView
+            android:id="@+id/textMain"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/thumbnail_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="39dp"
+            android:text="운동시간!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
